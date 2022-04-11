@@ -15,31 +15,29 @@ public class PayMoney {
 			
 			int[] tran = new int[size];
 					
-			// transactions
+			// fetch transactions
 			System.out.println("Enter the values of transactions");
 			for (int i=0;i<size;i++)
 			{
 				tran[i] = in.nextInt();
 			}
 			
-			//number of targets to be achieved
+			//fetch number of targets
 			System.out.println("Enter the number of targets");
 			int num = in.nextInt();
 			
-			//how many times number of targets to be achived
+			//fetch how many times number of targets has to be achived
 			for (int i=0;i<num;i++)
 			{
-				// Input the target from the user
+				// read target from the user
 				System.out.println("Enter the target");
 				int target = in.nextInt();
 				
-				int sum = 0; // to calculate the sum of tran array
+				int sum = 0; 
 				
-				int index = 0; // to track the index upto which the sum is taken
+				int index = 0;
 				
-				boolean flag = false; /* to check if target is achieved or 
-				* it is not achieved and the end of array has been reached */
-				
+				boolean flag = false; //target checking
 				
 				while(index < tran.length)
 				{
@@ -47,7 +45,7 @@ public class PayMoney {
 					index++;
 					if(sum>=target)
 					{
-						flag = true; // set flag as true if target is achieved and we have not reached end of array
+						flag = true; //target achieved
 						break;
 					}
 				}
